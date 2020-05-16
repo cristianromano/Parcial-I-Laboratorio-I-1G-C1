@@ -1,0 +1,89 @@
+# depslib dependency file v1.0
+1589589464 source:c:\users\cristian\desktop\carpeta codeblocks\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589584457 source:c:\users\cristian\desktop\carpeta codeblocks\parcial\marca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589589457 source:c:\users\cristian\desktop\carpeta codeblocks\parcial\notebook.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"hardcodeoDatos.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589584457 source:c:\users\cristian\desktop\carpeta codeblocks\parcial\tipo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589586518 source:c:\users\cristian\desktop\carpeta codeblocks\parcial\servicios.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"servicios.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"trabajo.h"
+
+1589589901 source:c:\users\cristian\desktop\carpeta codeblocks\parcial\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"trabajo.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+
+1589587146 c:\users\cristian\desktop\carpeta codeblocks\parcial\notebook.h
+	"marca.h"
+	"tipo.h"
+
+1589584201 c:\users\cristian\desktop\carpeta codeblocks\parcial\marca.h
+
+1589584238 c:\users\cristian\desktop\carpeta codeblocks\parcial\tipo.h
+
+1589586468 c:\users\cristian\desktop\carpeta codeblocks\parcial\servicios.h
+
+1589589360 c:\users\cristian\desktop\carpeta codeblocks\parcial\trabajo.h
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+
+1589582200 c:\users\cristian\desktop\carpeta codeblocks\parcial\hardcodeo.h
+
+1589582602 c:\users\cristian\desktop\carpeta codeblocks\parcial\harcod.h
+
+1589582791 c:\users\cristian\desktop\carpeta codeblocks\parcial\hardcodeodatos.h
+
