@@ -87,3 +87,102 @@
 
 1589582791 c:\users\cristian\desktop\carpeta codeblocks\parcial\hardcodeodatos.h
 
+1589916950 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+	"informes.h"
+
+1589845765 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\notebook.h
+	"marca.h"
+	"tipo.h"
+
+1589584201 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\marca.h
+
+1589584238 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\tipo.h
+
+1589586468 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\servicios.h
+
+1589589360 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\trabajo.h
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+
+1589600376 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\marca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589854076 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\notebook.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"hardcodeoDatos.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589853303 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\hardcodeodatos.h
+
+1589600388 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\tipo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589916484 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"trabajo.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+
+1589600108 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\servicios.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"servicios.h"
+
+1589926086 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"informes.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1589926056 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.h
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+

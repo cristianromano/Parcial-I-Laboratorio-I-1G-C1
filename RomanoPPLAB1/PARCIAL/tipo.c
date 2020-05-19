@@ -18,7 +18,7 @@ void printTipo(eTipo tipos[] , int tamTipos)
 
   int i;
 
-  printf("ID    TIPOS\n");
+  printf("ID       TIPOS\n");
   for(i=0;i<tamTipos;i++)
   {
 

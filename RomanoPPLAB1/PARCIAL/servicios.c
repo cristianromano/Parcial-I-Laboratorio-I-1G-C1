@@ -3,10 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "servicios.h"
-#include "notebook.h"
-#include "marca.h"
-#include "tipo.h"
-#include "trabajo.h"
+
 
 
 void printServicios(eServicio servicios[] , int tamServicios)
@@ -15,11 +12,11 @@ void printServicios(eServicio servicios[] , int tamServicios)
 
   int i;
 
-  printf("ID    SERVICIOS     PRECIOS\n");
+  printf("ID            SERVICIOS      PRECIOS\n");
   for(i=0;i<tamServicios;i++)
   {
 
-     printf("%d     %s      %.2f\n",servicios[i].id,servicios[i].servicios,servicios[i].precios);
+     printf("%d     %13s      %5.2f\n",servicios[i].id,servicios[i].servicios,servicios[i].precios);
 
   }
 

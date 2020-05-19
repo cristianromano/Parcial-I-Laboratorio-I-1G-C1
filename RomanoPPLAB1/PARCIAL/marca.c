@@ -17,7 +17,7 @@ void printMarcas(eMarca marcas[] , int tamMarcas)
 
   int i;
 
-  printf("ID    MARCAS\n");
+  printf("ID       MARCAS\n");
   for(i=0;i<tamMarcas;i++)
   {
 

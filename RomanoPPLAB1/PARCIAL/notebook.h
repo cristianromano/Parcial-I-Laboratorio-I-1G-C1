@@ -20,7 +20,7 @@ int isEmpty;
 }eNotebook;
 
 void initNotebook(eNotebook notebooks[], int tamNotebook);
-void hardcodeoDatosNotebook(eNotebook notebooks[] , int tamNotebook);
+void hardcodeoDatosNotebook(eNotebook notebooks[]);
 void clean();
 void pause();
 void limpiarBuffer();

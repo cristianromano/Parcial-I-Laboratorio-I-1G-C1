@@ -46,14 +46,14 @@ void initNotebook(eNotebook notebooks[], int tamNotebook)
 }
 
 
-void hardcodeoDatosNotebook(eNotebook notebooks[] , int tamNotebook)
+void hardcodeoDatosNotebook(eNotebook notebooks[])
 {
 
 int i;
 
 
 
-    for(i=0 ; i<tamNotebook ; i++)
+    for(i=0 ; i<7 ; i++)
     {
 
         strcpy(notebooks[i].modelo,modelos[i]);
@@ -82,7 +82,8 @@ int menu()
     printf("7.LISTAR SERVICIOS\n");
     printf("8.INGRESAR TRABAJOS\n");
     printf("9.MOSTRAR TRABAJOS\n");
-    printf("10.SALIR\n");
+    printf("10.INFORMES\n");
+    printf("11.SALIR\n");
 
 
     printf("eliga una opcion: ");

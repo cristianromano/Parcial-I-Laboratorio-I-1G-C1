@@ -6,13 +6,14 @@
 #include "tipo.h"
 #include "servicios.h"
 #include "trabajo.h"
+#include "informes.h"
 
 
 #define TAMMARCA 4
 #define TAMTIPOS 4
 #define TAMSERVICIOS 4
-#define TAMNOTEBOOKS 4
-#define TAMTRABAJOS 4
+#define TAMNOTEBOOKS 10
+#define TAMTRABAJOS 10
 
 int main()
 {
@@ -30,14 +31,13 @@ int main()
 
         initNotebook(notebooks,TAMNOTEBOOKS);
 
-        hardcodeoDatosNotebook(notebooks,TAMNOTEBOOKS);
+        hardcodeoDatosNotebook(notebooks);
 
         eTrabajo trabajos[TAMTRABAJOS];
 
         initTrabajos(trabajos,TAMTRABAJOS);
 
-
-
+        hardcodeoDatosTrabajo(trabajos);
 
     do{
 
@@ -61,7 +61,7 @@ int main()
         }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
@@ -72,7 +72,7 @@ int main()
         }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
@@ -83,7 +83,7 @@ int main()
         }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
@@ -94,7 +94,7 @@ int main()
         }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
@@ -105,7 +105,7 @@ int main()
         }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
@@ -116,7 +116,7 @@ int main()
         }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
@@ -127,7 +127,7 @@ int main()
         }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
@@ -139,11 +139,22 @@ int main()
             }
         else
         {
-            printf("no hay empleados ingresados.\n");
+            printf("no hay notebooks ingresados.\n");
         }
         break;
 
         case 10:
+         if(trigger==1){
+            clean();
+            menuDeInformes(trabajos,TAMTRABAJOS,notebooks,TAMNOTEBOOKS,servicios,TAMSERVICIOS,marca,TAMMARCA,tipos,TAMTIPOS);
+            }
+        else
+        {
+            printf("no hay notebooks ingresados.\n");
+        }
+        break;
+
+        case 11:
         seguir = 'n';
         break;
         default:
