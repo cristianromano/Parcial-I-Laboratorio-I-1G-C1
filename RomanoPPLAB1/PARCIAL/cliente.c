@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "cliente.h"
+#include "notebook.h"
 
 
 
@@ -13,7 +14,7 @@ int i;
 
     int id [] = { 501 , 502 , 503 , 504 , 505};
     char nombre [] [20] = { "CRISTIAN" , "ANDRES" , "MIGUEL" , "JORGE" , "PEDRO"};
-    char apellido [] [20] = { "ROMANO" , "MENDEZ" , "JAMES" , "PEREZ" , "SOLARES"};
+    char sexos [20] = { 'M' , 'M' , 'M' , 'M', 'M'};
 
 
     for(i=0 ; i<5 ; i++)
@@ -23,7 +24,7 @@ int i;
         limpiarBuffer();
         strcpy(clientes[i].nombre,nombre[i]);
         limpiarBuffer();
-        strcpy(clientes[i].apellido,apellido[i]);
+        clientes[i].sexo = sexos[i];
         limpiarBuffer();
 
     }

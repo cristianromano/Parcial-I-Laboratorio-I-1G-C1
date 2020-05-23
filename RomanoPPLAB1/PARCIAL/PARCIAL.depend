@@ -172,7 +172,7 @@
 	<string.h>
 	"servicios.h"
 
-1590194672 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.c
+1590194818 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -192,12 +192,13 @@
 	"trabajo.h"
 	"cliente.h"
 
-1590185811 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\cliente.h
+1590195676 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\cliente.h
 
-1590186781 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\cliente.c
+1590195662 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\cliente.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"cliente.h"
+	"notebook.h"
 

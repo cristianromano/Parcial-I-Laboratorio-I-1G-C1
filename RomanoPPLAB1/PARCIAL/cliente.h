@@ -5,7 +5,7 @@ typedef struct{
 
 int id;
 char nombre[25];
-char apellido[25];
+char sexo;
 
 }eCliente;
 
