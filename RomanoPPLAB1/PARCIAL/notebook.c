@@ -137,10 +137,18 @@ void ingresoDatosNotebook(eNotebook notebooks[] , int tamNotebook)
         fflush(stdin);*/
 
 
+
+
         printf("MODELOS ROJO / VERDE / AZUL / AMARILLO\n");
         printf("%d.ingrese modelo: ",i+1);
         fflush(stdin);
         gets(notebooks[indice].modelo);
+        fflush(stdin);
+
+        printf("INGRESE ID NOMBRE\n1.501 = CRISTIAN\n2.502 = ANDRES\n3.503 = MIGUEL\n4.504 = JORGE\n5.505 = PEDRO \n");
+        printf("%d.ingrese ID: ",i+1);
+        fflush(stdin);
+        scanf("%d",&notebooks[indice].idCliente);
         fflush(stdin);
 
         printf("MARCAS ID\n1.1000 = COMPAQ\n2.1001 = ASUS\n3.1002 = ACER\n4.1003 = HP\n");

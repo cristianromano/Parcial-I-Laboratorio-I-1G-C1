@@ -20,6 +20,7 @@ int i;
     for(i=0 ; i<5 ; i++)
     {
 
+
         clientes[i].id = id[i];
         limpiarBuffer();
         strcpy(clientes[i].nombre,nombre[i]);
