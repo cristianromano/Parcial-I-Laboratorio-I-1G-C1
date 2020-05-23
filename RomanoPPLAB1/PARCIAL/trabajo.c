@@ -8,7 +8,7 @@
 #include "marca.h"
 #include "tipo.h"
 #include "servicios.h"
-
+#include "cliente.h"
 
 
 static int generarIdTrabajos()
@@ -78,7 +78,7 @@ int buscarLibreTrabajos(eTrabajo trabajos[], int tamTrabajos)
 }
 
 
-void ingresoDatosTrabajo(eTrabajo trabajos[] , int tamTrabajos , eFecha auxFecha[],eNotebook notebooks[],int tamNotebook, eTipo tipos[] , int tamTipo,eMarca marcas[] , int tamMarca , eServicio servicios[] , int tamServicios)
+void ingresoDatosTrabajo(eTrabajo trabajos[] , int tamTrabajos , eFecha auxFecha[],eNotebook notebooks[],int tamNotebook, eTipo tipos[] , int tamTipo,eMarca marcas[] , int tamMarca , eServicio servicios[] , int tamServicios , eCliente clientes[] , int tamCliente)
 {
 
     int i = 0;
@@ -95,7 +95,7 @@ void ingresoDatosTrabajo(eTrabajo trabajos[] , int tamTrabajos , eFecha auxFecha
     else
     {
 
-        mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarca,tipos,tamTipo);
+        mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarca,tipos,tamTipo,clientes,tamCliente);
         printf("%d.ingrese idNotebook: ",i+1);
         scanf("%d",&trabajos[indice].idNotebook);
         fflush(stdin);

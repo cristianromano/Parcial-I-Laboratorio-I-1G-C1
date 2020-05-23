@@ -7,34 +7,43 @@
 #include "tipo.h"
 #include "servicios.h"
 #include "trabajo.h"
+#include "cliente.h"
 
 
 
 #define TAMMARCA 4
 #define TAMTIPOS 4
 #define TAMSERVICIOS 4
-#define TAMNOTEBOOKS 7
-#define TAMTRABAJOS 4
+#define TAMNOTEBOOKS 100
+#define TAMCLIENTES 5
+
+#define TAMTRABAJOS 100
 
 void menuParaInformes()
 {
 
-    printf("1.INFORMAR PRECIO DE NOTEBOOK X MARCA\n");
-    printf("2.INFORMAR NOTEBOOK X TIPO\n");
-    printf("3.INFORMAR NOTEBOOK MAS COSTOSA X MARCA\n");
-    printf("4.INFORMAR NOTEBOOK X MARCA\n");
-    printf("5.INFORMAR NOTEBOOKS GAMERS\n");
-    printf("6.REALIZAR UN AUMENTO DE PRECIO A LA MARCA\n");
-    printf("7.INFORMAR MARCA MAS COSTOSA\n");
-    printf("8.INFORMAR TOTAL PRECIOS X MARCA\n");
-    printf("9.INFORMAR NOTEBOOKS X MARCA\n");
-    printf("10.INFORMAR TRABAJO X FECHA\n");
-    printf("11.INFORMAR TRABJAOS X SERVICIO\n");
-    printf("12.SALIR A MENU PRINCIPAL\n");
+//   printf("1.INFORMAR PRECIO DE NOTEBOOK X MARCA\n");
+    printf("1.INFORMAR NOTEBOOK X TIPO\n");
+    printf("2.INFORMAR NOTEBOOK MAS BARATA X MARCA\n");
+    printf("3.INFORMAR NOTEBOOK X MARCA\n");
+    printf("4.INFORMAR SELECCIONANDO TIPO Y MARCA NOTEBOOK\n");
+    printf("5.INFORMAR LISTADO SEPARADO NOTEBOOK X MARCA\n");
+    printf("6.INFORMAR MARCA MAS ELEGIDA\n");
+
+    /* printf("6.REALIZAR UN AUMENTO DE PRECIO A LA MARCA\n");
+     printf("7.INFORMAR MARCA MAS COSTOSA\n");
+     printf("8.INFORMAR TOTAL PRECIOS X MARCA\n");
+     printf("9.INFORMAR NOTEBOOKS X MARCA\n");*/
+
+    printf("7.INFORMAR TRABAJO X FECHA\n");
+    printf("8.INFORMAR TRABAJOS X SERVICIO\n");
+    printf("9.INFORMAR TRABAJOS X NOTEBOOK\n");
+    printf("10.INFORMAR COSTO TOTAL DE TRABAJOS X NOTEBOOK\n");
+    printf("11.SALIR A MENU PRINCIPAL\n");
 
 }
 
-void menuDeInformes(eTrabajo trabajos[] , int tamTrabajos ,eNotebook notebooks[],int tamNotebook , eServicio servicios[] , int tamServicios , eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void menuDeInformes(eTrabajo trabajos[], int tamTrabajos,eNotebook notebooks[],int tamNotebook, eServicio servicios[], int tamServicios, eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo, eCliente clientes[], int tamCliente)
 {
     int numero = 0;
     char seguir = 's';
@@ -52,59 +61,56 @@ void menuDeInformes(eTrabajo trabajos[] , int tamTrabajos ,eNotebook notebooks[]
         {
         case 1:
             clean();
-            informarPrecioXMarca(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informeNotebookXTipo(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
             break;
+
         case 2:
             clean();
-            informeNotebookXTipo(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informeNotebookMasBaratas(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
             break;
 
         case 3:
             clean();
-            informeNotebookMasCostosaXMarca(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informeNotebooKListadoXMarca(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
             break;
 
         case 4:
             clean();
-            informeNotebooKListadoXMarca(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informarTipoYMarcaNotebook(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
             break;
 
         case 5:
             clean();
-            informeNotebooGamer(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informeNotebooKListado(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
             break;
 
-        case 6:
+         case 6:
             clean();
-            aumentoPrecioMarca(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informeMarcaMasElegida(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
             break;
 
         case 7:
             clean();
-            informarMarcaMasCostosa(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informarTrabajoXFecha(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS,notebooks,TAMNOTEBOOKS);
             break;
 
         case 8:
             clean();
-            informarTotalPreciosXMarca(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informarTrabajosXServicios(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS,notebooks,TAMNOTEBOOKS);
             break;
 
         case 9:
             clean();
-            informarTotalNotebooksXMarca(notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS);
+            informarTrabajosXNotebook(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS,notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
             break;
+
 
         case 10:
             clean();
-            informarTrabajoXFecha(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS,notebooks,TAMNOTEBOOKS);
+            informarTrabajosXCostos(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS,notebooks,TAMNOTEBOOKS,marcas,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
             break;
 
         case 11:
-            clean();
-            informarTrabajosXServicios(trabajos,TAMTRABAJOS,servicios,TAMSERVICIOS,notebooks,TAMNOTEBOOKS);
-            break;
-
-        case 12:
             seguir = 'n';
             break;
 
@@ -124,7 +130,7 @@ void menuDeInformes(eTrabajo trabajos[] , int tamTrabajos ,eNotebook notebooks[]
 }
 
 
-void informarPrecioXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void informarPrecioXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
 {
 
     int marca;
@@ -141,15 +147,15 @@ void informarPrecioXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] 
     clean();
 
     printf("**********************************************************************************\n");
-    printf("  ID      MODELO        MARCA        TIPO     PRECIO\n");
+    printf(" NOMBRE         ID      MODELO        MARCA        TIPO     PRECIO\n");
 
 
 
-    for(i=0;i<tamNotebook;i++)
+    for(i=0; i<tamNotebook; i++)
     {
         if(notebooks[i].idMarca == marca && notebooks[i].isEmpty == 0)
         {
-            printNotebook(notebooks[i],marcas,tamMarca,tipos,tamTipo);
+            // printNotebook(notebooks[i],marcas,tamMarca,tipos,tamTipo);
             printf("**********************************************************************************\n");
             trigger = 1;
         }
@@ -165,84 +171,202 @@ void informarPrecioXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] 
 
 }
 
-
-void informeNotebookXTipo(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void informarTipoYMarcaNotebook(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo,eCliente clientes[], int tamCliente)
 {
-    int i, j;
-    int trigger;
+
+    int marca;
+    int tipo;
+    int i;
+    int trigger = 0;
+    char descripcion[20];
+    char descripcionTipo[20];
+    int contador = 0;
+
+    printMarcas(marcas,tamMarca);
+    printf("ingrese marca de la notebook: ");
+    scanf("%d",&marca);
+
+    printTipo(tipos,tamTipo);
+    printf("ingrese tipo de la notebook: ");
+    scanf("%d",&tipo);
 
 
-    for(i=0; i<tamTipo; i++)
+    cargarDescripcionMarcas(descripcion,marcas,marca,tamMarca);
+    cargarDescripcionTipos(descripcionTipo,tipos,tipo,tamTipo);
+
+    clean();
+
+    printf("**********************************************************************************\n");
+
+
+    for(i=0; i<tamNotebook; i++)
     {
-
-        printf("TIPO %s\n",tipos[i].tipo);
-
-        trigger = 0;
-        for(j=0; j<tamNotebook; j++)
+        if(notebooks[i].idMarca == marca && notebooks[i].idTipo == tipo && notebooks[i].isEmpty == 0)
         {
-            if(notebooks[j].idTipo == tipos[i].id && notebooks[j].isEmpty == 0)
-            {
-                printNotebook(notebooks[j],marcas,tamMarca,tipos,tamTipo);
-                trigger = 1;
-            }
+            contador++;
+            // printf("**********************************************************************************\n");
+            trigger = 1;
         }
-
-
-        if(trigger == 0)
-        {
-            printf("no hay notebooks de ese tipo.\n");
-        }
-
-        printf("*************************************************************************************************\n");
 
     }
+
+    if(trigger == 1)
+    {
+        printf("en total son: %d de la marca %s con el tipo %s\n",contador,descripcion,descripcionTipo);
+        printf("**********************************************************************************\n");
+    }
+
+    if(trigger == 0)
+    {
+        printf("no hay notebooks registrado a esa marca %s con el tipo %s\n",descripcion,descripcionTipo);
+    }
+
+
 }
 
 
-void informeNotebookMasCostosaXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void informeNotebookXTipo(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo, eCliente clientes[], int tamCliente)
+{
+    int  j;
+    int trigger = 0;
+    int tipo;
+
+    printTipo(tipos,tamTipo);
+    printf("ingrese tipo de la notebook: ");
+    scanf("%d",&tipo);
+
+
+    clean();
+    printf("*************************************************************************************************\n");
+    printf(" NOMBRE         ID      MODELO        MARCA        TIPO     PRECIO\n");
+
+    for(j=0; j<tamNotebook; j++)
+    {
+        if(notebooks[j].idTipo == tipo && notebooks[j].isEmpty == 0)
+        {
+            printNotebook(notebooks[j],marcas,tamMarca,tipos,tamTipo,clientes,tamCliente);
+            trigger = 1;
+        }
+    }
+
+
+    if(trigger == 0)
+    {
+        printf("no hay notebooks de ese tipo.\n");
+    }
+
+    printf("*************************************************************************************************\n");
+
+
+}
+
+
+void informeNotebookMasBaratas(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
 {
 
-    int i, j;
-    int trigger;
-    int mayor;
+    int j;
+    int trigger = 0;
+    float menor;
     char nombre[20];
 
 
-    for(i=0; i<tamMarca; i++)
+    for(j=0; j<tamNotebook; j++)
     {
-
-        printf("MARCA %s\n",marcas[i].marca);
-
-        trigger = 0;
-        for(j=0; j<tamNotebook; j++)
+        if(notebooks[j].isEmpty == 0)
         {
-            if(notebooks[j].idMarca == marcas[i].id && notebooks[j].isEmpty == 0)
+            if(notebooks[j].precio < menor || trigger == 0)
             {
-                if(notebooks[j].precio > mayor || trigger == 0)
-                {
-                    cargarDescripcionMarcas(nombre,marcas,marcas[i].id,tamMarca);
-                    mayor = notebooks[j].precio;
-                    trigger = 1;
 
-                }
+                menor = notebooks[j].precio;
+                trigger = 1;
 
             }
+
         }
 
-        printf("La notebook mas costosa de la marca %s , vale: %d\n",nombre,mayor);
+    }
 
-        if(trigger == 0)
-        {
-            printf("no hay notebooks de ese tipo.\n");
-        }
 
+    if(trigger == 1)
+    {
         printf("*************************************************************************************************\n");
+
+        for(j=0; j<tamNotebook; j++)
+        {
+            if(notebooks[j].precio == menor && notebooks[j].isEmpty == 0)
+            {
+                cargarDescripcionMarcas(nombre,marcas,notebooks[j].idMarca,tamMarca);
+                printf("La notebook mas baratas de la marca %s , vale: %.2f\n",nombre,menor);
+            }
+
+        }
+
+    }
+
+
+    if(trigger == 0)
+    {
+        printf("no hay notebooks de ese tipo.\n");
+    }
+
+    printf("*************************************************************************************************\n");
+
+
+
+}
+
+
+void informeMarcaMasElegida(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
+{
+
+float cantidadNotebooks[tamMarca];
+float mayor;
+int trigger = 0;
+char descripcion[20];
+int i;
+
+
+for(i=0;i<tamMarca;i++)
+{
+    cantidadNotebooks[i] = cargarTotalNotebooks(notebooks,tamNotebook,marcas[i].id);
+
+
+}
+
+for(i=0;i<tamMarca;i++)
+{
+    if(cantidadNotebooks[i] > mayor || trigger == 0)
+    {
+        mayor = cantidadNotebooks[i];
+        trigger = 1;
 
     }
 
 }
 
-void informeNotebooKListadoXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+if(trigger == 1)
+{
+     printf("las marcas mas elegidas son: \n");
+
+    for(i=0;i<tamMarca;i++)
+    {
+        if(cantidadNotebooks[i] == mayor && notebooks[i].isEmpty == 0)
+        {
+            cargarDescripcionMarcas(descripcion,marcas,marcas[i].id,tamMarca);
+            printf("%d.%s\n",marcas[i].id,descripcion);
+        }
+    }
+}
+
+
+
+
+}
+
+
+
+
+void informeNotebooKListado(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo, eCliente clientes[], int tamCliente)
 {
 
     int i, j;
@@ -251,12 +375,12 @@ void informeNotebooKListadoXMarca(eNotebook notebooks[],int tamNotebook,eMarca m
     for(i=0; i<tamMarca; i++)
     {
 
-       // printf("**********************************************************************************\n");
+        // printf("**********************************************************************************\n");
 
         printf("MARCA %s\n",marcas[i].marca);
 
         printf("**********************************************************************************\n");
-        printf("  ID      MODELO        MARCA        TIPO     PRECIO\n");
+        printf(" NOMBRE         ID      MODELO        MARCA        TIPO     PRECIO\n");
 
         trigger = 0;
         for(j=0; j<tamNotebook; j++)
@@ -264,9 +388,9 @@ void informeNotebooKListadoXMarca(eNotebook notebooks[],int tamNotebook,eMarca m
             if(notebooks[j].idMarca == marcas[i].id && notebooks[j].isEmpty == 0)
             {
 
-               printNotebook(notebooks[j],marcas,tamMarca,tipos,tamTipo);
-               trigger = 1;
-             //  printf("**********************************************************************************\n");
+                printNotebook(notebooks[j],marcas,tamMarca,tipos,tamTipo,clientes,tamCliente);
+                trigger = 1;
+                //  printf("**********************************************************************************\n");
 
             }
         }
@@ -282,45 +406,83 @@ void informeNotebooKListadoXMarca(eNotebook notebooks[],int tamNotebook,eMarca m
 
 }
 
+void informeNotebooKListadoXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo, eCliente clientes[], int tamCliente)
+{
 
-void informeNotebooGamer(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+    int  j;
+    int trigger;
+    int marca;
+
+    printMarcas(marcas,tamMarca);
+    printf("ingrese marca de la notebook: ");
+    scanf("%d",&marca);
+
+
+    printf("**********************************************************************************\n");
+    printf(" NOMBRE         ID      MODELO        MARCA        TIPO     PRECIO\n");
+
+    trigger = 0;
+    for(j=0; j<tamNotebook; j++)
+    {
+        if(notebooks[j].idMarca == marca && notebooks[j].isEmpty == 0)
+        {
+
+            printNotebook(notebooks[j],marcas,tamMarca,tipos,tamTipo,clientes,tamCliente);
+            trigger = 1;
+            //  printf("**********************************************************************************\n");
+
+        }
+    }
+
+    if(trigger == 0)
+    {
+        printf("no hay notebooks de ese tipo.\n");
+    }
+
+    printf("**********************************************************************************\n");
+
+
+}
+
+
+void informeNotebooGamer(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
 {
 
     int j;
     int trigger;
 
 
-       // printf("**********************************************************************************\n");
+    // printf("**********************************************************************************\n");
 
-        printf("NOTEBOOK GAMERS\n");
+    printf("NOTEBOOK GAMERS\n");
 
-        printf("**********************************************************************************\n");
-        printf("  ID      MODELO        MARCA        TIPO     PRECIO\n");
+    printf("**********************************************************************************\n");
+    printf("  ID      MODELO        MARCA        TIPO     PRECIO\n");
 
-        trigger = 0;
-        for(j=0; j<tamNotebook; j++)
+    trigger = 0;
+    for(j=0; j<tamNotebook; j++)
+    {
+        if(notebooks[j].idTipo == 5000 && notebooks[j].isEmpty == 0)
         {
-            if(notebooks[j].idTipo == 5000 && notebooks[j].isEmpty == 0)
-            {
 
-               printNotebook(notebooks[j],marcas,tamMarca,tipos,tamTipo);
-               trigger = 1;
-             //  printf("**********************************************************************************\n");
+            //      printNotebook(notebooks[j],marcas,tamMarca,tipos,tamTipo);
+            trigger = 1;
+            //  printf("**********************************************************************************\n");
 
-            }
         }
+    }
 
-        if(trigger == 0)
-        {
-            printf("no hay notebooks de ese tipo.\n");
-        }
+    if(trigger == 0)
+    {
+        printf("no hay notebooks de ese tipo.\n");
+    }
 
-        printf("**********************************************************************************\n");
+    printf("**********************************************************************************\n");
 
 
 }
 
-void aumentoPrecioMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void aumentoPrecioMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
 {
 
     int i;
@@ -358,7 +520,7 @@ void aumentoPrecioMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , 
 
     if(trigger==1)
     {
-      printf("realizado con exito.\n");
+        printf("realizado con exito.\n");
     }
 
     if(trigger==0)
@@ -371,62 +533,62 @@ void aumentoPrecioMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , 
 
 
 
-void informarMarcaMasCostosa(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void informarMarcaMasBarata(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
 {
 
 
-float marcaMasCostosa[tamMarca];
-float mayor;
-int trigger = 0;
-char descripcion[20];
-int i;
+    float marcaMasBarata[tamMarca];
+    float menor;
+    int trigger = 0;
+    char descripcion[20];
+    int i;
 
 
-for(i=0;i<tamMarca;i++)
-{
-    marcaMasCostosa[i] = cargarPrecioMarca(tamNotebook,notebooks,marcas[i].id);
-
-}
-
-for(i=0;i<tamMarca;i++)
-{
-    if(marcaMasCostosa[i] > mayor || trigger == 0)
+    for(i=0; i<tamMarca; i++)
     {
-        mayor = marcaMasCostosa[i];
-        trigger = 1;
+        marcaMasBarata[i] = cargarPrecioMarca(tamNotebook,notebooks,marcas[i].id);
 
     }
 
-}
-
-if(trigger == 1)
-{
-     printf("la marca mas costosa son: \n");
-
-    for(i=0;i<tamMarca;i++)
+    for(i=0; i<tamMarca; i++)
     {
-        if(marcaMasCostosa[i] == mayor && notebooks[i].isEmpty == 0)
+        if(marcaMasBarata[i] < menor || trigger == 0)
         {
-            cargarDescripcionMarcas(descripcion,marcas,marcas[i].id,tamMarca);
-            printf("%d.%s con %.2f total\n",marcas[i].id,descripcion,mayor);
+            menor = marcaMasBarata[i];
+            trigger = 1;
+
+        }
+
+    }
+
+    if(trigger == 1)
+    {
+        printf("la marca mas barata son: \n");
+
+        for(i=0; i<tamMarca; i++)
+        {
+            if(marcaMasBarata[i] == menor && notebooks[i].isEmpty == 0)
+            {
+                cargarDescripcionMarcas(descripcion,marcas,marcas[i].id,tamMarca);
+                printf("%d.%s con %.2f total\n",marcas[i].id,descripcion,menor);
+            }
         }
     }
-}
 
 
 
 }
 
 
-void informarTotalPreciosXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void informarTotalPreciosXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
 {
 
-float totalPrecio[tamMarca];
-int trigger = 0;
-int i , j;
+    float totalPrecio[tamMarca];
+    int trigger = 0;
+    int i, j;
 
 
-    for(i=0;i<tamMarca;i++)
+    for(i=0; i<tamMarca; i++)
     {
         totalPrecio[i] = cargarPrecioMarca(tamNotebook,notebooks,marcas[i].id);
 
@@ -436,7 +598,7 @@ int i , j;
     for(i=0; i<tamMarca; i++)
     {
 
-       // printf("**********************************************************************************\n");
+        // printf("**********************************************************************************\n");
 
         printf("**********************************************************************************\n");
         printf("PRECIO TOTAL DE LA MARCA %s: ",marcas[i].marca);
@@ -447,10 +609,10 @@ int i , j;
             if(notebooks[j].idMarca == marcas[i].id && notebooks[j].isEmpty == 0)
             {
 
-               printf("%.2f\n",totalPrecio[i]);
-               trigger = 1;
-               break;
-             //  printf("**********************************************************************************\n");
+                printf("%.2f\n",totalPrecio[i]);
+                trigger = 1;
+                break;
+                //  printf("**********************************************************************************\n");
 
             }
         }
@@ -467,7 +629,7 @@ int i , j;
 }
 
 
-void informarTotalNotebooksXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void informarTotalNotebooksXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[], int tamMarca, eTipo tipos[], int tamTipo)
 {
     int i, j;
     int trigger;
@@ -490,10 +652,10 @@ void informarTotalNotebooksXMarca(eNotebook notebooks[],int tamNotebook,eMarca m
         }
 
 
-       if(trigger==1)
-       {
-           printf("el total de notebooks de la marca %s es de: %d\n",marcas[i].marca,acumulador);
-       }
+        if(trigger==1)
+        {
+            printf("el total de notebooks de la marca %s es de: %d\n",marcas[i].marca,acumulador);
+        }
 
 
         if(trigger == 0)
@@ -512,7 +674,7 @@ void informarTotalNotebooksXMarca(eNotebook notebooks[],int tamNotebook,eMarca m
 
 }
 
-void informarTrabajoXFecha(eTrabajo trabajos[],int tamTrabajos ,eServicio servicios[] , int tamServicios , eNotebook notebooks[] , int tamNotebook)
+void informarTrabajoXFecha(eTrabajo trabajos[],int tamTrabajos,eServicio servicios[], int tamServicios, eNotebook notebooks[], int tamNotebook)
 {
     int i;
     int anio;
@@ -526,7 +688,7 @@ void informarTrabajoXFecha(eTrabajo trabajos[],int tamTrabajos ,eServicio servic
 
     printf("**********************************************************************************\n");
     printf("  ID  TRABAJO   ID NOTEBOOK       MODELO       SERVICIO     FECHA    \n");
-    for(i=0;i<tamTrabajos;i++)
+    for(i=0; i<tamTrabajos; i++)
     {
 
         if(trabajos[i].fecha.anio == anio && trabajos[i].isEmpty == 0)
@@ -548,7 +710,7 @@ void informarTrabajoXFecha(eTrabajo trabajos[],int tamTrabajos ,eServicio servic
 }
 
 
-void informarTrabajosXServicios(eTrabajo trabajos[],int tamTrabajos ,eServicio servicios[] , int tamServicios , eNotebook notebooks[] , int tamNotebook)
+void informarTrabajosXServicios(eTrabajo trabajos[],int tamTrabajos,eServicio servicios[], int tamServicios, eNotebook notebooks[], int tamNotebook)
 {
     int i;
     int servicio;
@@ -562,7 +724,7 @@ void informarTrabajosXServicios(eTrabajo trabajos[],int tamTrabajos ,eServicio s
 
     printf("**********************************************************************************\n");
     printf("  ID  TRABAJO   ID NOTEBOOK       MODELO       SERVICIO     FECHA    \n");
-    for(i=0;i<tamTrabajos;i++)
+    for(i=0; i<tamTrabajos; i++)
     {
 
         if(trabajos[i].idServicio == servicio && trabajos[i].isEmpty == 0)
@@ -580,15 +742,90 @@ void informarTrabajosXServicios(eTrabajo trabajos[],int tamTrabajos ,eServicio s
     }
 }
 
+void informarTrabajosXNotebook(eTrabajo trabajos[],int tamTrabajos,eServicio servicios[], int tamServicios, eNotebook notebooks[], int tamNotebook, eMarca marcas[], int tamMarcas, eTipo tipos[], int tamTipos , eCliente clientes[] , int tamCliente)
+{
+    int i;
+    int notebook;
+    int trigger = 0;
 
-float cargarPrecioMarca(int tamNotebooks , eNotebook notebooks[] , int id)
+
+   mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarcas,tipos,tamTipos,clientes,tamCliente);
+    printf("ingrese ID de notebook: ");
+    scanf("%d",&notebook);
+
+
+    printf("**********************************************************************************\n");
+    printf("  ID  TRABAJO   ID NOTEBOOK       MODELO       SERVICIO     FECHA    \n");
+    for(i=0; i<tamTrabajos; i++)
+    {
+
+        if(trabajos[i].idNotebook == notebook && trabajos[i].isEmpty == 0)
+        {
+            printTrabajos(trabajos[i],notebooks,tamNotebook,servicios,tamServicios);
+            trigger = 1;
+        }
+
+
+    }
+
+    if(trigger == 0)
+    {
+        printf("no hay servicios realizados a esta notebook\n");
+    }
+}
+
+void informarTrabajosXCostos(eTrabajo trabajos[],int tamTrabajos,eServicio servicios[], int tamServicios, eNotebook notebooks[], int tamNotebook, eMarca marcas[], int tamMarcas, eTipo tipos[], int tamTipos , eCliente clientes[] , int tamCliente)
+{
+    int i, j;
+    int notebook;
+    int trigger = 0;
+    float acumulador = 0;
+
+
+    mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarcas,tipos,tamTipos,clientes,tamCliente);
+    printf("ingrese ID de notebook: ");
+    scanf("%d",&notebook);
+
+
+    printf("**********************************************************************************\n");
+    for(i=0; i<tamTrabajos; i++)
+    {
+
+        if(trabajos[i].idNotebook == notebook && trabajos[i].isEmpty == 0)
+        {
+
+            for(j=0; j<tamServicios; j++)
+            {
+                if(trabajos[i].idServicio == servicios[j].id)
+                {
+                    acumulador += servicios[j].precios;
+                    trigger = 1;
+                }
+
+            }
+
+        }
+    }
+
+    if(trigger == 1)
+    {
+        printf("total acumulado de los servicios de la notebook ID: %d son: %.2f\n",notebook,acumulador);
+    }
+
+    if(trigger == 0)
+    {
+        printf("no hay servicios realizados a esta notebook\n");
+    }
+}
+
+float cargarPrecioMarca(int tamNotebooks, eNotebook notebooks[], int id)
 {
 
-int i;
-float acumulador = 0;
+    int i;
+    float acumulador = 0;
 
 
-    for(i=0;i<tamNotebooks;i++)
+    for(i=0; i<tamNotebooks; i++)
     {
         if(notebooks[i].idMarca == id && notebooks[i].isEmpty == 0)
         {
@@ -597,11 +834,29 @@ float acumulador = 0;
     }
 
 
-return acumulador;
+    return acumulador;
 
 }
 
 
 
+int cargarTotalNotebooks(eNotebook notebooks[], int tamNotebooks , int idMarca)
+{
 
+    int i;
+    int contador = 0;
+
+        for(i=0;i<tamNotebooks;i++)
+        {
+            if(notebooks[i].idMarca == idMarca && notebooks[i].isEmpty ==0)
+            {
+                contador++;
+            }
+        }
+
+
+    return contador;
+
+
+}
 

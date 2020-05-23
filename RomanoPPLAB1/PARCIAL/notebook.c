@@ -8,11 +8,12 @@
 #include "tipo.h"
 #include "servicios.h"
 #include "trabajo.h"
+#include "cliente.h"
 
 
 static int generarIdNotebook()
 {
-	static int contadorId=100;
+	static int contadorId=106;
 	contadorId++;
 	return contadorId;
 }
@@ -61,6 +62,7 @@ int i;
         notebooks[i].id = ids[i];
         notebooks[i].idMarca = idMarca[i];
         notebooks[i].idTipo = idTipo[i];
+        notebooks[i].idCliente = idCliente[i];
         notebooks[i].precio = precios[i];
          notebooks[i].isEmpty = 0;
 
@@ -135,16 +137,18 @@ void ingresoDatosNotebook(eNotebook notebooks[] , int tamNotebook)
         fflush(stdin);*/
 
 
-
+        printf("MODELOS ROJO / VERDE / AZUL / AMARILLO\n");
         printf("%d.ingrese modelo: ",i+1);
         fflush(stdin);
         gets(notebooks[indice].modelo);
         fflush(stdin);
 
+        printf("MARCAS ID\n1.1000 = COMPAQ\n2.1001 = ASUS\n3.1002 = ACER\n4.1003 = HP\n");
         printf("%d.ingrese idMarca: ",i+1);
         scanf("%d",&notebooks[indice].idMarca);
         fflush(stdin);
 
+        printf("TIPOS ID\n1.5000 = GAMER\n2.5001 = DISENIO\n3.5002 = ULTRABOOK\n4.5003 = NORMALITA\n");
         printf("%d.ingrese idTipo: ",i+1);
         scanf("%d",&notebooks[indice].idTipo);
         fflush(stdin);
@@ -187,35 +191,37 @@ int buscarNotebook(int id, eNotebook notebooks[], int tamNotebook)
 
 
 
-void printNotebook(eNotebook notebooks , eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void printNotebook(eNotebook notebooks , eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo , eCliente clientes[] ,  int tamCliente)
 {
 
     char descripcionMarca[20];
     char descripcionTipo[20];
+    char descripcionCliente[20];
 
     cargarDescripcionMarcas(descripcionMarca,marcas,notebooks.idMarca,tamMarca);
     cargarDescripcionTipos(descripcionTipo,tipos,notebooks.idTipo,tamTipo);
+    cargarDescripcionCliente(descripcionCliente,clientes,notebooks.idCliente,tamCliente);
 
-    printf("  %d  %10s %10s   %10s    %.2f   \n",notebooks.id,notebooks.modelo,descripcionMarca,descripcionTipo,notebooks.precio);
+    printf(" %9s       %d  %10s %10s   %10s    %.2f   \n",descripcionCliente,notebooks.id,notebooks.modelo,descripcionMarca,descripcionTipo,notebooks.precio);
 
 
 
 }
 
 
-void mostrarNotebooks(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void mostrarNotebooks(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo , eCliente clientes[] ,  int tamCliente)
 {
     int trigger = 0;
     int i;
 
     printf("**********************************************************************************\n");
-    printf("  ID      MODELO        MARCA        TIPO     PRECIO\n");
+    printf(" NOMBRE         ID      MODELO        MARCA        TIPO     PRECIO\n");
     for(i=0; i<tamNotebook; i++)
     {
 
         if(notebooks[i].isEmpty == 0)
         {
-            printNotebook(notebooks[i],marcas,tamMarca,tipos,tamTipo);
+            printNotebook(notebooks[i],marcas,tamMarca,tipos,tamTipo,clientes,tamCliente);
             trigger = 1;
         }
 
@@ -233,7 +239,7 @@ void mostrarNotebooks(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , in
 
 
 
-void modificarNotebook(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void modificarNotebook(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo , eCliente clientes[] , int tamCliente)
 {
     int numero = 0;
     int id = 0;
@@ -242,7 +248,7 @@ void modificarNotebook(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , i
 
     char respuesta;
 
-    mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarca,tipos,tamTipo);
+    mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarca,tipos,tamTipo,clientes,tamCliente);
 
     printf("\ningrese el ID de la notebook a modificar: ");
     scanf("%d",&numero);
@@ -331,13 +337,13 @@ void modificarNotebook(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , i
 }
 
 
-void removerNotebook(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo)
+void removerNotebook(eNotebook notebooks[],int tamNotebook,eMarca marcas[] , int tamMarca , eTipo tipos[] , int tamTipo , eCliente clientes[] , int tamCliente)
 {
     int numero = 0;
     int id = 0;
     char respuesta;
 
-    mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarca,tipos,tamTipo);
+    mostrarNotebooks(notebooks,tamNotebook,marcas,tamMarca,tipos,tamTipo,clientes,tamCliente);
 
     printf("ingrese ID de notebook a remover: ");
     scanf("%d",&numero);

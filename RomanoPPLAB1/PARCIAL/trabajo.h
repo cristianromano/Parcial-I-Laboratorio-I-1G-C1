@@ -27,8 +27,7 @@ int isEmpty;
 
 void initTrabajos(eTrabajo trabajos[], int tamTrabajos);
 int buscarLibreTrabajos(eTrabajo trabajos[], int tamTrabajos);
-void ingresoDatosTrabajo(eTrabajo trabajos[] , int tamTrabajos , eFecha auxFecha[],eNotebook notebooks[],int tamNotebook, eTipo tipos[] , int tamTipo,eMarca marcas[] , int tamMarca , eServicio servicios[] , int tamServicios);
 void printTrabajos(eTrabajo trabajos ,eNotebook notebooks[],int tamNotebook , eServicio servicios[] , int tamServicios);
 void mostrarTrabajos(eTrabajo trabajos[] , int tamTrabajos ,eNotebook notebooks[],int tamNotebook , eServicio servicios[] , int tamServicios);
-
+void ingresoDatosTrabajo(eTrabajo trabajos[] , int tamTrabajos , eFecha auxFecha[],eNotebook notebooks[],int tamNotebook, eTipo tipos[] , int tamTipo,eMarca marcas[] , int tamMarca , eServicio servicios[] , int tamServicios , eCliente clientes[] , int tamCliente);
 #endif // TRABAJO_H_INCLUDED

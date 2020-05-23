@@ -7,13 +7,15 @@
 #include "servicios.h"
 #include "trabajo.h"
 #include "informes.h"
+#include "cliente.h"
 
 
 #define TAMMARCA 4
 #define TAMTIPOS 4
 #define TAMSERVICIOS 4
-#define TAMNOTEBOOKS 10
-#define TAMTRABAJOS 10
+#define TAMNOTEBOOKS 100
+#define TAMTRABAJOS 100
+#define TAMCLIENTES 5
 
 int main()
 {
@@ -26,6 +28,10 @@ int main()
     eTipo tipos[TAMTIPOS] = { {5000,"GAMER"},{5001,"DISENIO"},{5002,"ULTRABOOK"},{5003,"NORMALITA"} };
     eServicio servicios[TAMSERVICIOS] = { {"BATERIA",250,20000},{"ANTIVIRUS",300,20001},{"ACTUALIZACION",400,20002},{"FUENTE",600,20003} };
 
+
+        eCliente clientes[TAMCLIENTES];
+
+        hardcodeoCliente(clientes);
 
         eNotebook notebooks[TAMNOTEBOOKS];
 
@@ -57,7 +63,7 @@ int main()
 
         if(trigger==1){
             clean();
-          modificarNotebook(notebooks,TAMNOTEBOOKS,marca,TAMMARCA,tipos,TAMTIPOS);
+          modificarNotebook(notebooks,TAMNOTEBOOKS,marca,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
         }
         else
         {
@@ -68,7 +74,7 @@ int main()
         case 3:
          if(trigger==1){
             clean();
-            mostrarNotebooks(notebooks,TAMNOTEBOOKS,marca,TAMMARCA,tipos,TAMTIPOS);
+            mostrarNotebooks(notebooks,TAMNOTEBOOKS,marca,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
         }
         else
         {
@@ -79,7 +85,7 @@ int main()
         case 4:
          if(trigger==1){
             clean();
-            removerNotebook(notebooks,TAMNOTEBOOKS,marca,TAMMARCA,tipos,TAMTIPOS);
+            removerNotebook(notebooks,TAMNOTEBOOKS,marca,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
         }
         else
         {
@@ -123,7 +129,7 @@ int main()
         case 8:
          if(trigger==1){
             clean();
-            ingresoDatosTrabajo(trabajos,TAMTRABAJOS,fechas,notebooks,TAMNOTEBOOKS,tipos,TAMTIPOS,marca,TAMMARCA,servicios,TAMSERVICIOS);
+            ingresoDatosTrabajo(trabajos,TAMTRABAJOS,fechas,notebooks,TAMNOTEBOOKS,tipos,TAMTIPOS,marca,TAMMARCA,servicios,TAMSERVICIOS,clientes,TAMCLIENTES);
         }
         else
         {
@@ -146,7 +152,7 @@ int main()
         case 10:
          if(trigger==1){
             clean();
-            menuDeInformes(trabajos,TAMTRABAJOS,notebooks,TAMNOTEBOOKS,servicios,TAMSERVICIOS,marca,TAMMARCA,tipos,TAMTIPOS);
+            menuDeInformes(trabajos,TAMTRABAJOS,notebooks,TAMNOTEBOOKS,servicios,TAMSERVICIOS,marca,TAMMARCA,tipos,TAMTIPOS,clientes,TAMCLIENTES);
             }
         else
         {

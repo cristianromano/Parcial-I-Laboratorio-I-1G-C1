@@ -87,7 +87,7 @@
 
 1589582791 c:\users\cristian\desktop\carpeta codeblocks\parcial\hardcodeodatos.h
 
-1589916950 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\main.c
+1590193458 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -97,10 +97,12 @@
 	"servicios.h"
 	"trabajo.h"
 	"informes.h"
+	"cliente.h"
 
-1589845765 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\notebook.h
+1590186254 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\notebook.h
 	"marca.h"
 	"tipo.h"
+	"cliente.h"
 
 1589584201 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\marca.h
 
@@ -108,7 +110,7 @@
 
 1589586468 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\servicios.h
 
-1589589360 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\trabajo.h
+1590186316 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\trabajo.h
 	"notebook.h"
 	"marca.h"
 	"tipo.h"
@@ -125,7 +127,7 @@
 	"servicios.h"
 	"trabajo.h"
 
-1589854076 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\notebook.c
+1590194035 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\notebook.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -136,8 +138,9 @@
 	"tipo.h"
 	"servicios.h"
 	"trabajo.h"
+	"cliente.h"
 
-1589853303 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\hardcodeodatos.h
+1590192993 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\hardcodeodatos.h
 
 1589600388 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\tipo.c
 	<stdio.h>
@@ -150,7 +153,7 @@
 	"servicios.h"
 	"trabajo.h"
 
-1589916484 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\trabajo.c
+1590186316 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -160,6 +163,7 @@
 	"marca.h"
 	"tipo.h"
 	"servicios.h"
+	"cliente.h"
 
 1589600108 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\servicios.c
 	<stdio.h>
@@ -168,7 +172,7 @@
 	<string.h>
 	"servicios.h"
 
-1589926086 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.c
+1590194672 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -178,11 +182,22 @@
 	"tipo.h"
 	"servicios.h"
 	"trabajo.h"
+	"cliente.h"
 
-1589926056 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.h
+1590194450 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\informes.h
 	"notebook.h"
 	"marca.h"
 	"tipo.h"
 	"servicios.h"
 	"trabajo.h"
+	"cliente.h"
+
+1590185811 c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\cliente.h
+
+1590186781 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanopplab1\parcial\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"cliente.h"
 
