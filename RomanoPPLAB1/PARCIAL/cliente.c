@@ -14,7 +14,7 @@ int i;
 
     int id [] = { 501 , 502 , 503 , 504 , 505};
     char nombre [] [20] = { "CRISTIAN" , "ANDRES" , "MIGUEL" , "JORGE" , "PEDRO"};
-    char sexos [20] = { 'M' , 'M' , 'M' , 'M', 'M'};
+    char sexos [] = { 'M' , 'M' , 'M' , 'M', 'M'};
 
 
     for(i=0 ; i<5 ; i++)
