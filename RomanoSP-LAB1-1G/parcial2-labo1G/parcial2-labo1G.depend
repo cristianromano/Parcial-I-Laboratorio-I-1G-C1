@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1593463632 source:c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Entidad.h"
+	"parser.h"
+
+1593411459 c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\linkedlist.h
+
+1593411770 c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\entidad.h
+
+1533133022 c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\parser.h
+
+1593463443 source:c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\entidad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Entidad.h"
+
+1593411225 c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\controller.h
+
+1593411459 source:c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1593463443 source:c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Entidad.h"
+
+1593463443 source:c:\users\cristian\desktop\carpeta codeblocks\parcial2-labo1g\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Entidad.h"
+
+1593479074 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Entidad.h"
+	"parser.h"
+
+1593411459 c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\linkedlist.h
+
+1593478604 c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\entidad.h
+
+1593468491 c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\parser.h
+
+1593480201 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\entidad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Entidad.h"
+
+1593476022 c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\controller.h
+
+1593477602 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1593468510 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Entidad.h"
+
+1593480201 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romanosp-lab1-1g\parcial2-labo1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Entidad.h"
+
