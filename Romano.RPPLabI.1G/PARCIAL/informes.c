@@ -206,6 +206,7 @@ void informarPrecioXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[],
     int i;
     int trigger = 0;
     char descripcion[20];
+    char desctipo[20];
 
     printMarcas(marcas,tamMarca);
     printf("ingrese marca de la notebook: ");
@@ -215,8 +216,8 @@ void informarPrecioXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[],
 
     clean();
 
-    printf("**********************************************************************************\n");
-    printf(" NOMBRE         ID      MODELO        MARCA        TIPO     PRECIO\n");
+    printf("********************************************************\n");
+    printf("  MODELO        MARCA        TIPO     PRECIO\n");
 
 
 
@@ -224,8 +225,12 @@ void informarPrecioXMarca(eNotebook notebooks[],int tamNotebook,eMarca marcas[],
     {
         if(notebooks[i].idMarca == marca && notebooks[i].isEmpty == 0)
         {
-             printNotebook(notebooks[i],marcas,tamMarca,tipos,tamTipo,clientes,tamCliente,estado,tamEstado);
-            printf("**********************************************************************************\n");
+                cargarDescripcionTipos(desctipo,tipos,notebooks[i].idTipo,tamTipo);
+
+                printf("%6s         %5s    %10s    %.2f\n",notebooks[i].modelo,descripcion,desctipo,notebooks[i].precio);
+
+          //   printNotebook(notebooks[i],marcas,tamMarca,tipos,tamTipo,clientes,tamCliente,estado,tamEstado);
+             printf("********************************************************\n");
             trigger = 1;
         }
 

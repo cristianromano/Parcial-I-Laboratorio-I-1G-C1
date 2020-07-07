@@ -221,3 +221,137 @@
 	"informes.h"
 	"cliente.h"
 
+1590197302 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"cliente.h"
+	"notebook.h"
+
+1590195676 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\cliente.h
+
+1594074292 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\notebook.h
+	"marca.h"
+	"tipo.h"
+	"cliente.h"
+	"estado.h"
+
+1589584201 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\marca.h
+
+1589584238 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\tipo.h
+
+1594073578 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\estado.h
+
+1594073591 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\estado.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+	"informes.h"
+	"cliente.h"
+
+1589586468 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\servicios.h
+
+1594074205 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\trabajo.h
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+
+1594078683 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\informes.h
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+	"cliente.h"
+	"estado.h"
+
+1594081245 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"informes.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+	"cliente.h"
+
+1594074300 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+	"informes.h"
+	"cliente.h"
+	"estado.h"
+
+1589600376 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\marca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1594078228 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\notebook.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"hardcodeoDatos.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+	"cliente.h"
+
+1594078151 c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\hardcodeodatos.h
+
+1589600108 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\servicios.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"servicios.h"
+
+1589600388 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\tipo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"trabajo.h"
+
+1594074233 source:c:\users\cristian\desktop\parcial - laboratorio 1g\romano.rpplabi.1g\parcial\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"trabajo.h"
+	"notebook.h"
+	"marca.h"
+	"tipo.h"
+	"servicios.h"
+	"cliente.h"
+
